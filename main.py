@@ -1,68 +1,28 @@
 from js import document
-import time
 import random
+import asyncio
 
-# Set variables random value
-x = random.randint(1, 6)
-y = random.randint(1, 3)
-z = random.randint(2, 5)
+async def roll_dice():
+    x = random.randint(1, 6)
+    z = random.randint(2, 5)
 
-# Prints the value of the variables
-if z == 2:
-    time.sleep(0.25)
-    output_div = document.querySelector("#rolling1")
-    output_div.textContent = "Rolling dice"
-    time.sleep(0.5)
-    output_div = document.querySelector("#rolling2")
-    output_div.textContent = "Rolling dice."
-    time.sleep(0.5)
-    output_div = document.querySelector("#roll")
-    output_div.textContent = f"You rolled a {x}"
-elif z == 3:
-    time.sleep(0.25)
-    output_div = document.querySelector("#rolling1")
-    output_div.textContent = "Rolling dice"
-    time.sleep(0.5)
-    output_div = document.querySelector("#rolling2")
-    output_div.textContent = "Rolling dice."
-    time.sleep(0.5)
-    output_div = document.querySelector("#rolling3")
-    output_div.textContent = "Rolling dice.."
-    time.sleep(0.5)
-    output_div = document.querySelector("#roll")
-    output_div.textContent = f"You rolled a {x}"
-elif z == 4:
-    time.sleep(0.25)
-    output_div = document.querySelector("#rolling1")
-    output_div.textContent = "Rolling dice"
-    time.sleep(0.5)
-    output_div = document.querySelector("#rolling2")
-    output_div.textContent = "Rolling dice."
-    time.sleep(0.5)
-    output_div = document.querySelector("#rolling3")
-    output_div.textContent = "Rolling dice.."
-    time.sleep(0.5)
-    output_div = document.querySelector("#rolling4")
-    output_div.textContent = "Rolling dice..."
-    time.sleep(0.5)
-    output_div = document.querySelector("#roll")
-    output_div.textContent = f"You rolled a {x}"
-elif z == 5:
-    time.sleep(0.25)
-    output_div = document.querySelector("#rolling1")
-    output_div.textContent = "Rolling dice"
-    time.sleep(0.5)
-    output_div = document.querySelector("#rolling2")
-    output_div.textContent = "Rolling dice."
-    time.sleep(0.5)
-    output_div = document.querySelector("#rolling3")
-    output_div.textContent = "Rolling dice.."
-    time.sleep(0.5)
-    output_div = document.querySelector("#rolling4")
-    output_div.textContent = "Rolling dice..."
-    time.sleep(0.5)
-    output_div = document.querySelector("#rolling5")
-    output_div.textContent = "Rolling dice"
-    time.sleep(0.5)
-    output_div = document.querySelector("#roll")
-    output_div.textContent = f"You rolled a {x}"
+    messages = [
+        "Rolling dice",
+        "Rolling dice.",
+        "Rolling dice..",
+        "Rolling dice...",
+        "Rolling dice"
+    ]
+
+    # Loop through the number of rolling messages based on z
+    for i in range(z - 1):
+        div = document.querySelector(f"#rolling{i+1}")
+        div.textContent = messages[i]
+        await asyncio.sleep(0.5)
+
+    # Final result
+    result_div = document.querySelector("#roll")
+    result_div.textContent = f"You rolled a {x}"
+
+# Call the function when script loads
+asyncio.ensure_future(roll_dice())
