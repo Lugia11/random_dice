@@ -1,42 +1,33 @@
-from js import document
+from js import document, console
 import random
 import asyncio
 
-# Async dice roll function
+# Function to roll dice
 async def roll_dice():
+    # Clear previous text
+    for i in range(1, 6):
+        document.querySelector(f"#rolling{i}").textContent = ""
+
+    document.querySelector("#roll").textContent = ""
+
+    # Roll logic
     x = random.randint(1, 6)
     z = random.randint(2, 5)
 
-    messages = [
-        "Rolling dice",
-        "Rolling dice.",
-        "Rolling dice..",
-        "Rolling dice...",
-        "Rolling dice"
-    ]
+    messages = ["Rolling dice", "Rolling dice.", "Rolling dice..", "Rolling dice...", "Rolling dice"]
 
-    # Clear previous roll text
-    for i in range(1, 6):
-        div = document.querySelector(f"#rolling{i}")
-        div.textContent = ""
-
-    result_div = document.querySelector("#roll")
-    result_div.textContent = ""
-
-    # Animate "Rolling dice..." messages
     for i in range(z):
-        if i < len(messages):
-            div = document.querySelector(f"#rolling{i+1}")
-            div.textContent = messages[i]
-            await asyncio.sleep(0.5)
+        if i < 5:
+            document.querySelector(f"#rolling{i+1}").textContent = messages[i]
+        await asyncio.sleep(0.5)
 
-    # Final result
-    result_div.textContent = f"You rolled a {x}"
+    # Show result
+    document.querySelector("#roll").textContent = f"You rolled a {x}"
 
-# Async event listener for keydown
-async def on_keydown(event):
+# JavaScript event wrapper
+def on_keydown(event):
     if event.code == "KeyR":
-        await roll_dice()
+        asyncio.ensure_future(roll_dice())
 
-# Register the keydown event listener
+# Add the listener
 document.addEventListener("keydown", on_keydown)
