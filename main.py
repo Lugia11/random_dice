@@ -2,6 +2,8 @@ from js import document
 import random
 import asyncio
 
+def on_keydown(event):
+    if event.code == "KeyR":
 async def roll_dice():
     x = random.randint(1, 6)
     z = random.randint(2, 5)
@@ -26,3 +28,4 @@ async def roll_dice():
 
 # Call the function when script loads
 asyncio.ensure_future(roll_dice())
+document.addEventListener("keydown", on_keydown)
