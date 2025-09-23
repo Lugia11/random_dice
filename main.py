@@ -9,9 +9,10 @@ y = random.randint (1,3)
 z = random.randint (2,5)
 
 #Prints the value of the variables
-output_div = document.querySelector("#output")
+
 if z == 2:
     time.sleep(0.25)
+    output_div = document.querySelector("#rolling")
     output_div.innertext ("Rolling dice")
     time.sleep(0.5)
     output_div.innertext ("Rolling dice.")
