@@ -1,6 +1,6 @@
 import time
 import random
-import document
+from pyscript import document
 
 
 #Set variables random value
