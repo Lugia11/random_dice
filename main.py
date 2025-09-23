@@ -1,6 +1,7 @@
 import time
 import random
 from js import document
+from js import innertext
 
 
 #Set variables random value
