@@ -13,58 +13,58 @@ z = random.randint (2,5)
 if z == 2:
     time.sleep(0.25)
     output_div = document.querySelector("#rolling")
-    output_div.innertext "Rolling dice"
+    output_div.innerText "Rolling dice"
     time.sleep(0.5)
     output_div = document.querySelector("#rolling")
-    output_div.innertext "Rolling dice."
+    output_div.innerText "Rolling dice."
     time.sleep(0.5)
     output_div = document.querySelector("#roll")
-    output_div.innertext f"You rolled a {x}"
+    output_div.innerText f"You rolled a {x}"
 elif z == 3:
     time.sleep(0.25)
     output_div = document.querySelector("#rolling")
-    output_div.innertext "Rolling dice"
+    output_div.innerText "Rolling dice"
     time.sleep(0.5)
     output_div = document.querySelector("#rolling")
-    output_div.innertext "Rolling dice."
+    output_div.innerText "Rolling dice."
     time.sleep(0.5)
     output_div = document.querySelector("#rolling")
-    output_div.innertext "Rolling dice.."
+    output_div.innerText "Rolling dice.."
     time.sleep(0.5)
     output_div = document.querySelector("#roll")
-    output_div.innertext f"You rolled a {x}"
+    output_div.innerText f"You rolled a {x}"
 elif z == 4:
     time.sleep(0.25)
     output_div = document.querySelector("#rolling")
-    output_div.innertext "Rolling dice"
+    output_div.innerText "Rolling dice"
     time.sleep(0.5)
     output_div = document.querySelector("#rolling")
-    output_div.innertext "Rolling dice."
+    output_div.innerText "Rolling dice."
     time.sleep(0.5)
     output_div = document.querySelector("#rolling")
-    output_div.innertext "Rolling dice.."
+    output_div.innerText "Rolling dice.."
     time.sleep(0.5)
     output_div = document.querySelector("#rolling")
-    output_div.innertext "Rolling dice..."
+    output_div.innerText "Rolling dice..."
     time.sleep(0.5)
     output_div = document.querySelector("#roll")
-    output_div.innertext f"You rolled a {x}"
+    output_div.innerText f"You rolled a {x}"
 elif z == 5:
     time.sleep(0.25)
     output_div = document.querySelector("#rolling")
-    output_div.innertext "Rolling dice"
+    output_div.innerText "Rolling dice"
     time.sleep(0.5)
     output_div = document.querySelector("#rolling")
-    output_div.innertext "Rolling dice."
+    output_div.innerText "Rolling dice."
     time.sleep(0.5)
     output_div = document.querySelector("#rolling")
-    output_div.innertext "Rolling dice.."
+    output_div.innerText "Rolling dice.."
     time.sleep(0.5)
     output_div = document.querySelector("#rolling")
-    output_div.innertext "Rolling dice..."
+    output_div.innerText "Rolling dice..."
     time.sleep(0.5)
     output_div = document.querySelector("#rolling")
-    output_div.innertext "Rolling dice"
+    output_div.innerText "Rolling dice"
     time.sleep(0.5)
     output_div = document.querySelector("#roll")
-    output_div.innertext f"You rolled a {x}"
+    output_div.innerText f"You rolled a {x}"
