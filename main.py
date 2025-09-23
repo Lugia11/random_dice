@@ -1,5 +1,6 @@
 import time
 import random
+from js import document
 
 
 #Set variables random value
