@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dice Roller</title>
-    <link rel="stylesheet" href="https://pyscript.net/releases/2025.8.1/core.css">
-    <script type="module" src="https://pyscript.net/releases/2025.8.1/core.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+        #messages p {
+            margin: 5px 0;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        #roll {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: green;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <h1>Dice Roller</h1>
-    <div id="rolling1"></div>
-    <div id="rolling2"></div>
-    <div id="rolling3"></div>
-    <div id="rolling4"></div>
-    <div id="rolling5"></div>
-    <div id="roll"></div>
 
-    <script type="py" src="main.py"></script>
+    <div id="messages">
+        <p id="rolling1"></p>
+        <p id="rolling2"></p>
+        <p id="rolling3"></p>
+        <p id="rolling4"></p>
+        <p id="rolling5"></p>
+    </div>
+
+    <p id="roll"></p>
+
+    <button onclick="rollDice()">Roll Dice</button>
+
+    <script src="main.js"></script>
 </body>
 </html>
